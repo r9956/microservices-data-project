@@ -17,19 +17,27 @@ spring:
         locator:
           enabled: true
       routes:
+        - id: attendance-service
+          uri: lb://attendance-service
+          predicates:
+            - Path=/attendance/**
         - id: clock-service
           uri: lb://clock-service
           predicates:
             - Path=/clock/**
+        - id: extrahours-service
+          uri: lb://extrahours-service
+          predicates:
+            - Path=/extrahours/**
+        - id: payroll-service
+          uri: lb://payroll-service
+          predicates:
+            - Path=/payroll/**
         - id: student-service
           uri: lb://student-service
           predicates:
             - Path=/student/**
-        - id: book-service
-          uri: lb://book-service
+        - id: report-service
+          uri: lb://report-service
           predicates:
-            - Path=/book/**
-        - id: pet-service
-          uri: lb://pet-service
-          predicates:
-            - Path=/pet/**
+            - Path=/report/**
