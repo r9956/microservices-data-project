@@ -25,18 +25,14 @@ spring:
           uri: lb://clock-service
           predicates:
             - Path=/clock/**
-        - id: extrahours-service
-          uri: lb://extrahours-service
+        - id: extraHours-service
+          uri: lb://extraHours-service
           predicates:
-            - Path=/extrahours/**
+            - Path=/extraHours/**
         - id: payroll-service
           uri: lb://payroll-service
           predicates:
             - Path=/payroll/**
-        - id: student-service
-          uri: lb://student-service
-          predicates:
-            - Path=/student/**
         - id: report-service
           uri: lb://report-service
           predicates:
