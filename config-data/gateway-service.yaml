@@ -16,6 +16,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
       routes:
         - id: attendance-service
           uri: lb://attendance-service
