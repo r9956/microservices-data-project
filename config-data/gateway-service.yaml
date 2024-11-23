@@ -17,8 +17,7 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins:
-              - "http://localhost:5173" # For development
-              - "https://frontend-prod.com"  # Prod environment (change accordingly)
+              - ["*"]
             allowedMethods:
               - GET
               - POST
