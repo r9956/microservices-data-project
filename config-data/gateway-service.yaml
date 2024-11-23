@@ -50,5 +50,6 @@ spring:
               - "PUT"
               - "DELETE"
               - "OPTIONS"
-            allowedHeaders: "*"
+            allowedHeaders:
+              - "*"  # Allow all headers
             allowCredentials: true
