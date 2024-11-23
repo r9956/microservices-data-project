@@ -16,8 +16,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOriginPatterns:
-              - "http://localhost:5173"
+            allowedOrigins: "http://localhost:5173"
             allowedMethods:
               - GET
               - POST
@@ -47,6 +46,13 @@ spring:
           uri: lb://payroll-service
           predicates:
             - Path=/payroll/**
+          method: GET
+          metadata:
+            cors:
+              allowedOrigins: 'http://localhost:5173'
+              allowedMethods:
+                - GET
+              allowedHeaders: '*'
         - id: report-service
           uri: lb://report-service
           predicates:
