@@ -15,7 +15,7 @@ spring:
     gateway:
       globalcors:
         cors-configurations:
-          '/**':
+          '[/**]':
             allowedOrigins:
               - "http://localhost:5173" # For development
               - "https://frontend-prod.com"  # Prod environment (change accordingly)
@@ -33,7 +33,7 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-          
+
       routes:
         - id: attendance-service
           uri: lb://attendance-service
