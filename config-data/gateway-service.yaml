@@ -25,8 +25,7 @@ spring:
               - DELETE
               - OPTIONS
             allowedHeaders:
-              - "*"  # Allow all headers
-            allowCredentials: true  # Allows cookies or other credentials to be sent
+              - "*"
 
       discovery:
         locator:
