@@ -38,18 +38,3 @@ spring:
           uri: lb://report-service
           predicates:
             - Path=/report/**
-      globalcors:
-        cors-configurations:
-          '/**':
-            allowedOrigins:
-              - "http://localhost:5173"  # Frontend origin during development
-              - "https://frontend-prod.com"  # Prod environment
-            allowedMethods:
-              - "GET"
-              - "POST"
-              - "PUT"
-              - "DELETE"
-              - "OPTIONS"
-            allowedHeaders:
-              - "*"  # Allow all headers
-            allowCredentials: true
